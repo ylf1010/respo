@@ -1,0 +1,18 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8088/eureka/
+server:
+  port: 8086
+spring:
+  application:
+    name: service-feign
+  main:
+    allow-bean-definition-overriding: true  #\u914D\u7F6E\u53EF\u4EE5\u5B58\u5728\u591A\u4E2A\u751F\u4EA7\u8005\u5B9E\u4F8B
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+feign:
+  hystrix:
+    enabled: true  #\u914D\u7F6E\u6587\u4EF6\u4E2D\u914D\u7F6E\u6253\u5F00\u65AD\u8DEF\u5668
